@@ -24,3 +24,6 @@ streamlit.dataframe(fruits_to_show)
 # Let's put a pick list here so they can pick the fruit they want to include 
 
 
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
