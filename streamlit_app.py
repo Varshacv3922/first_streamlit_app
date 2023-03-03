@@ -1,8 +1,10 @@
+#dont't run the stop code
+
+
 import snowflake.connector
-
-
 import streamlit
-import pandas
+#import pandas
+from urllib.error import URLError
 
 streamlit.title('My parents New Healthy Dinner')
 streamlit.header('Breakfast Menu')
@@ -49,5 +51,5 @@ streamlit.dataframe(my_data_rows)
 
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
-
+streamlit.stop()
 my_cur.execute("insert into FRUIT_LOAD_LIST values ('from streamlit')")
